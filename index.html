@@ -384,6 +384,17 @@ details.acc{border-radius:16px}details.acc summary{padding:10px 12px;font-size:1
 #dpanel .dt-nm{margin-top:14px;padding-top:14px;border-top:1px solid var(--hair)}
 #dpanel .dt-sub{margin-bottom:10px}
 @media(max-width:760px){#sggSel{width:100%}}
+
+/* 유형 카드: 한 줄 정의 + 낮은 높이 */
+.seg-card{container-type:inline-size;padding:16px 84px 14px 22px}
+.seg-card::after{right:-150px}
+.ico{width:46px;height:46px;font-size:22px;right:37px}
+.kind{padding:3px 10px;font-size:11.5px}.cnt{font-size:12px}.cnt b{font-size:15px}
+.seg-name{margin:8px 0 4px}.seg-name h3{font-size:21px}
+.quote{white-space:nowrap;font-size:clamp(10.5px,5cqw,14px);letter-spacing:-.02em;margin-bottom:5px}
+.long{font-size:12px;line-height:1.5;margin-bottom:9px}
+.tags{gap:5px}.tags span{padding:2px 8px;font-size:11px}
+@media(max-width:760px){.seg-grid{gap:10px}.seg-card{padding:14px 80px 12px 20px}.seg-card::after{right:-150px}.ico{width:46px;height:46px;font-size:22px;right:37px}.seg-name h3{font-size:20px}.long{display:none}.quote{margin-bottom:8px}}
 </style></head><body>
 <div class="top"><div class="topin">
  <nav class="nav"><a href="#types">유형</a><a href="#map-sec">지도</a><a href="#rank">순위</a><a href="#sgg">자치구</a><a href="#voice">목소리</a><a href="#policy">제안</a></nav>
