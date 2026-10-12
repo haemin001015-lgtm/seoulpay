@@ -436,6 +436,17 @@ details.acc{border-radius:16px}details.acc summary{padding:10px 12px;font-size:1
 @media(max-width:760px){.sec-h{margin:84px 0 20px;padding-top:60px}#types.sec-h{margin-top:40px}}
 @media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
 @media print{.rv{opacity:1!important;transform:none!important}.sec-h{margin-top:40px;padding-top:30px}}
+
+/* 섹션 구분: 은은한 세로 그라데이션 선 */
+.sec-h{margin:96px 0 26px;padding-top:104px}
+.sec-h::before{left:50%;right:auto;top:0;width:2px;height:76px;margin-left:-1px;border:0;border-radius:2px;background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--accent) 55%,transparent) 45%,color-mix(in srgb,#8E7BEA 45%,transparent) 70%,transparent);-webkit-mask-image:none;mask-image:none}
+.sec-h::after{display:none}
+#types.sec-h{padding-top:0}
+@media(max-width:760px){.sec-h{margin:70px 0 20px;padding-top:84px}.sec-h::before{height:60px}}
+@media print{.sec-h::before{display:none}}
+/* 순위 그룹 제목: 순위 범위를 이름 옆에 */
+.rk-col h4{justify-content:flex-start;align-items:baseline;gap:8px}
+.rk-col h4 span+span{font-size:12px}
 </style></head><body>
 <div class="top"><div class="topin">
  <nav class="nav"><a href="#types">유형</a><a href="#map-sec">지도</a><a href="#rank">순위</a><a href="#sgg">자치구</a><a href="#policy">제안</a><a href="#voice">목소리</a></nav>
