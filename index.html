@@ -156,6 +156,24 @@ details.acc summary::before{content:'▸';color:var(--sub);font-size:11px;transi
 .sc .blk.sol h4::before{content:none}
 .sc .blk.sol p{color:var(--accent-ink);font-weight:600;font-size:13.5px;line-height:1.6;text-wrap:balance}
 .lg.sol{border-radius:20px}.lg.now{border-radius:20px;background:var(--accent);color:var(--accent-ink)}
+
+/* 유형 카드 — 흰 카드 + 좌상단 색 꺾쇠 + 우측 색 곡면 + 원형 이모지 */
+.seg-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.seg-card{position:relative;overflow:hidden;background:var(--panel);border:0;border-radius:22px;padding:26px 172px 20px 32px;box-shadow:0 8px 26px rgba(27,36,51,.10);min-height:214px}
+.seg-card::before{content:"";position:absolute;left:0;top:0;width:36%;height:58%;border-top:7px solid var(--c);border-left:7px solid var(--c);border-top-left-radius:22px;pointer-events:none}
+.seg-card::after{content:"";position:absolute;top:-25%;right:-95px;width:210px;height:150%;border-radius:50%;background:var(--c)}
+.ico{position:absolute;right:79px;top:50%;transform:translateY(-50%);z-index:2;width:72px;height:72px;border-radius:50%;background:var(--panel);box-shadow:0 6px 18px rgba(27,36,51,.18);font-size:34px;line-height:1;display:grid;place-items:center;font-family:"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji",sans-serif}
+.seg-top{justify-content:flex-start;gap:10px}
+.seg-name{margin:12px 0 8px}.seg-name h3{color:var(--ct);font-size:27px}
+@media(max-width:760px){.seg-grid{grid-template-columns:1fr}.seg-card{padding:24px 112px 18px 26px;min-height:0}.seg-card::after{right:-128px}.ico{width:56px;height:56px;font-size:26px;right:54px}.seg-name h3{font-size:23px}}
+/* 25구 카드 — 현황·제안을 대표 유형 색으로 */
+.sc .blk.now{border-color:color-mix(in srgb,var(--c) 55%,var(--line))}
+.sc .blk.now h4{background:var(--c);color:var(--on)}
+.sc .blk.now::after{border-top-color:var(--c)}
+.sc .blk.sol{background:var(--c)}
+.sc .blk.sol h4{background:color-mix(in srgb,var(--on) 16%,transparent);color:var(--on)}
+.sc .blk.sol p{color:var(--on)}
+.lg.now,.lg.sol{background:var(--ink);color:var(--bg)}
 </style></head><body>
 <div class="top"><div class="topin">
  <div class="brand"><span class="logo">SP</span><div>서울페이 Track A<small>426동 소비환경 유형·정책 대시보드</small></div></div>
@@ -175,44 +193,44 @@ details.acc summary::before{content:'▸';color:var(--sub);font-size:11px;transi
 <p class="sub">소비환경 유형 4개와 그 위에 얹은 정책 오버레이 2개입니다. ‘지도에서 보기’를 누르면 해당 유형이 지도에 강조됩니다.</p>
 <div class="seg-grid"><article class="seg-card s0">
  <div class="seg-top"><span class="kind">소비환경 유형</span><span class="cnt"><b>206</b>개 동</span></div>
- <div class="seg-name"><span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 2.5 11.2h2.7V20h5v-5.5h3.6V20h5v-8.8h2.7z"/></svg></span><h3>동네소비형</h3></div>
+ <div class="seg-name"><span class="ico">🏠</span><h3>동네소비형</h3></div>
  <p class="quote">“동네 안에서 생활소비가 반복되는 정주형 상권”</p>
- <p class="long">생활밀착·소매 비중이 높고 저녁 매출이 크며,<br>외부 유입은 상대적으로 낮음</p>
+ <p class="long">생활밀착·소매 비중이 높고 저녁 매출이 크며, <br>외부 유입은 상대적으로 낮음</p>
  <div class="tags"><span>#생활밀착</span><span>#저녁소비</span><span>#정주형</span></div>
  <button class="goseg" data-goseg="동네소비형">지도에서 보기 →</button>
 </article><article class="seg-card s1">
  <div class="seg-top"><span class="kind">소비환경 유형</span><span class="cnt"><b>116</b>개 동</span></div>
- <div class="seg-name"><span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M5.5 2v6.3a3 3 0 0 0 2.2 2.9V22h2.1V11.2A3 3 0 0 0 12 8.3V2h-1.5v5.6H9.5V2H8v5.6H7V2z"/><path d="M15 22h2.1v-7.2h2.4V7.5c0-3-1.7-5.5-4.5-5.5z"/></svg></span><h3>활력상권형</h3></div>
+ <div class="seg-name"><span class="ico">🍽️</span><h3>활력상권형</h3></div>
  <p class="quote">“주말과 저녁에 소비 활력이 커지는 번화 상권”</p>
- <p class="long">주말·저녁 소비와 식음료 비중이 높아<br>시간대별 활력이 뚜렷하게 나타남</p>
+ <p class="long">주말·저녁 소비와 식음료 비중이 높아 <br>시간대별 활력이 뚜렷하게 나타남</p>
  <div class="tags"><span>#주말</span><span>#저녁</span><span>#식음료</span></div>
  <button class="goseg" data-goseg="활력상권형">지도에서 보기 →</button>
 </article><article class="seg-card s2">
  <div class="seg-top"><span class="kind">소비환경 유형</span><span class="cnt"><b>32</b>개 동</span></div>
- <div class="seg-name"><span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 4h6a1.5 1.5 0 0 1 1.5 1.5V7H20a1.5 1.5 0 0 1 1.5 1.5V12h-19V8.5A1.5 1.5 0 0 1 4 7h3.5V5.5A1.5 1.5 0 0 1 9 4zm.5 3h5V6h-5zM2.5 13.5H10V15h4v-1.5h7.5v5A1.5 1.5 0 0 1 20 20H4a1.5 1.5 0 0 1-1.5-1.5z"/></svg></span><h3>직장인상권형</h3></div>
+ <div class="seg-name"><span class="ico">💼</span><h3>직장인상권형</h3></div>
  <p class="quote">“업무시간 소비가 집중되는 직장인 중심 상권”</p>
- <p class="long">평일·주간 업무 활동이 집중되고<br>저녁·주말 매출은 상대적으로 낮음</p>
+ <p class="long">평일·주간 업무 활동이 집중되고 <br>저녁·주말 매출은 상대적으로 낮음</p>
  <div class="tags"><span>#평일</span><span>#주간</span><span>#업무</span></div>
  <button class="goseg" data-goseg="직장인상권형">지도에서 보기 →</button>
 </article><article class="seg-card s3">
  <div class="seg-top"><span class="kind">소비환경 유형</span><span class="cnt"><b>37</b>개 동</span></div>
- <div class="seg-name"><span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="12" cy="6.3" r="2.7"/><path d="M7.6 20.5v-5.8a4.4 4.4 0 0 1 8.8 0v5.8z"/><circle cx="4.9" cy="9.2" r="2"/><path d="M1.5 19.3v-4.1a3.4 3.4 0 0 1 4.7-3.1 6 6 0 0 0-.2 1.6v5.6z"/><circle cx="19.1" cy="9.2" r="2"/><path d="M22.5 19.3v-4.1a3.4 3.4 0 0 0-4.7-3.1 6 6 0 0 1 .2 1.6v5.6z"/></svg></span><h3>유동인구형</h3></div>
+ <div class="seg-name"><span class="ico">👥</span><h3>유동인구형</h3></div>
  <p class="quote">“낮 시간 외부 유입이 큰 도심형 상권”</p>
- <p class="long">낮 유동인구가 큰 도심 상업·관광핵으로,<br>군집 전 선격리한 영향제어층</p>
+ <p class="long">낮 유동인구가 큰 도심 상업·관광핵으로, <br>군집 전 선격리한 영향제어층</p>
  <div class="tags"><span>#낮유동</span><span>#도심</span><span>#관광</span></div>
  <button class="goseg" data-goseg="유동인구형">지도에서 보기 →</button>
 </article><article class="seg-card s4">
  <div class="seg-top"><span class="kind">정책 오버레이</span><span class="cnt"><b>26</b>개 동</span></div>
- <div class="seg-name"><span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 4 1.5 9.5 12 15l8-4.2V16h1.5V9.5z"/><path d="M5.5 13.3V17c0 1.5 3 2.8 6.5 2.8s6.5-1.3 6.5-2.8v-3.7L12 16.7z"/></svg></span><h3>대학상권</h3></div>
+ <div class="seg-name"><span class="ico">🎓</span><h3>대학상권</h3></div>
  <p class="quote">“청년과 저녁 소비가 두드러지는 대학가”</p>
- <p class="long">서울시 캠퍼스타운 대학 소재 동으로,<br>청년층과 저녁 소비가 상대적으로 큼</p>
+ <p class="long">서울시 캠퍼스타운 대학 소재 동으로, <br>청년층과 저녁 소비가 상대적으로 큼</p>
  <div class="tags"><span>#캠퍼스</span><span>#청년</span><span>#저녁</span></div>
  <button class="goseg" data-goseg="대학상권">지도에서 보기 →</button>
 </article><article class="seg-card s5">
  <div class="seg-top"><span class="kind">정책 오버레이</span><span class="cnt"><b>9</b>개 동</span></div>
- <div class="seg-name"><span class="ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.2 14.6A8.6 8.6 0 1 1 9.9 3.5a7 7 0 0 0 10.3 11.1z"/></svg></span><h3>야간거점</h3></div>
+ <div class="seg-name"><span class="ico">🌙</span><h3>야간거점</h3></div>
  <p class="quote">“서울시 야간경제 정책이 집중된 전략 거점”</p>
- <p class="long">2026 달빛야장 6곳과 한강·상생특구 등<br>저녁·야간 소비 정책의 1차 대상 지역</p>
+ <p class="long">2026 달빛야장 6곳과 한강·상생특구 등 <br>저녁·야간 소비 정책의 1차 대상 지역</p>
  <div class="tags"><span>#야간경제</span><span>#정책거점</span><span>#저녁·야간</span></div>
  <button class="goseg" data-goseg="야간거점">지도에서 보기 →</button>
 </article></div>
