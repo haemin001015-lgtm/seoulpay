@@ -140,6 +140,22 @@ details.acc summary::before{content:'▸';color:var(--sub);font-size:11px;transi
 @media(max-width:1100px){.long br{display:none}}
 @media(max-width:620px){.seg-grid{grid-template-columns:1fr}.seg-name h3{font-size:23px}.brand small{display:none}}
 @media print{.top{position:static}.tbtns,.goseg{display:none}.seg-card,.sc,.pol,details.acc{break-inside:avoid;box-shadow:none}body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
+/* 25구 카드 — 현황(흰 카드) ▼ 제안(채운 박스) */
+.sc-grid{gap:32px 14px;padding-top:14px}
+.sc{background:none;border:0;box-shadow:none;padding:0;gap:0;border-radius:0}
+.sc .blk{text-align:center;position:relative}
+.sc .blk.now{flex:1;background:var(--panel);border:1px solid color-mix(in srgb,var(--accent) 24%,var(--line));border-radius:24px;padding:30px 18px 24px;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;gap:9px}
+.sc .blk.now h4{position:absolute;top:-13px;left:50%;transform:translateX(-50%);margin:0;background:var(--accent);color:var(--accent-ink);border-radius:20px;padding:4px 16px;font-size:12.5px;white-space:nowrap}
+.sc .blk.now::after{content:"";position:absolute;left:50%;bottom:-12px;transform:translateX(-50%);border:10px solid transparent;border-top:12px solid var(--accent);border-bottom:0;z-index:1}
+.sc .sc-h{flex-direction:column;justify-content:center;gap:5px}.sc .sc-h b{font-size:21px}
+.sc .zones{justify-content:center}
+.sc .blk.now p{color:var(--sub);text-wrap:balance}
+.sc .blk.sol{flex:none;margin-top:13px;min-height:122px;background:var(--accent);border:0;border-radius:22px;padding:15px 18px 18px;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.sc .blk.sol h4{margin:0;background:color-mix(in srgb,var(--accent-ink) 20%,transparent);color:var(--accent-ink);border-radius:20px;padding:3px 15px;font-weight:600}
+.sc .blk.sol h4::before{content:none}
+.sc .blk.sol p{color:var(--accent-ink);font-weight:600;font-size:13.5px;line-height:1.6;text-wrap:balance}
+.lg.sol{border-radius:20px}.lg.now{border-radius:20px;background:var(--accent);color:var(--accent-ink)}
 </style></head><body>
 <div class="top"><div class="topin">
  <div class="brand"><span class="logo">SP</span><div>서울페이 Track A<small>426동 소비환경 유형·정책 대시보드</small></div></div>
@@ -233,131 +249,56 @@ details.acc summary::before{content:'▸';color:var(--sub);font-size:11px;transi
 <h2 id="policy"><span class="no">05</span> 자치구별 정책 제안</h2>
 <p class="sub">각 구를 <b>현황</b>(대표 유형·침투율 진단)과 <b>제안</b>(서울페이 활성화 방안)으로 나눠 정리했습니다. 검증된 효과가 아닌 제안 초안입니다.</p>
 <div class="denom"><span class="pill">서울 전체 서울페이 침투율</span><b>0.06%</b><span style="color:var(--sub)">구별 침투율은 순위로 표기(1위=최고)</span></div>
-<div class="legend2" style="margin-bottom:16px"><span class="lg now">현황</span>지금 어떤 상태인가<span class="lg sol">→ 제안</span>그래서 무엇을 할 것인가</div>
-<div class="sc-grid"><article class="sc s3">
-     <header class="sc-h"><b>강남구</b><span class="rk3">침투 22위/25</span></header>
-     <div class="zones"><span class="zchip s3">대표 유동인구형</span><span class="zchip s5">야간거점 1동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>유동인구형 9동</b>(41%) · 침투율 <b>0.02%</b>. 주야간 인구비가 상위권이고 외지 유동이 큰 도심 상업지.</p></section>
+<div class="legend2" style="margin-bottom:16px"><span class="lg now">현황</span>지금 어떤 상태인가<span class="lg sol">제안</span>그래서 무엇을 할 것인가</div>
+<div class="sc-grid"><article class="sc s3"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>강남구</b><span class="rk3">침투 22위/25</span></header><div class="zones"><span class="zchip s3">대표 유동인구형</span><span class="zchip s5">야간거점 1동</span></div><p>대표 <b>유동인구형 9동</b>(41%) · 침투율 <b>0.02%</b>. 주야간 인구비가 상위권이고 외지 유동이 큰 도심 상업지.</p></section>
      <section class="blk sol"><h4>제안</h4><p>낮 유동이 큰 도심 — 평일 낮 시간대 안내·혜택으로 방문 소비를 지역 결제로 전환한다. 야간거점은 저녁(17~24시) 페이백을 병행.</p></section>
-    </article><article class="sc s0">
-     <header class="sc-h"><b>강동구</b><span class="rk3">침투 16위/25</span></header>
-     <div class="zones"><span class="zchip s0">대표 동네소비형</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>동네소비형 10동</b>(53%) · 침투율 <b>0.08%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
+    </article><article class="sc s0"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>강동구</b><span class="rk3">침투 16위/25</span></header><div class="zones"><span class="zchip s0">대표 동네소비형</span></div><p>대표 <b>동네소비형 10동</b>(53%) · 침투율 <b>0.08%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>생활밀착 업종(식료·생활서비스) 첫 결제·재사용 혜택으로 주민의 반복 이용을 늘린다.</p></section>
-    </article><article class="sc s0">
-     <header class="sc-h"><b>강북구</b><span class="rk3">침투 4위/25</span></header>
-     <div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 1동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>동네소비형 9동</b>(69%) · 침투율 <b>0.69%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
+    </article><article class="sc s0"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>강북구</b><span class="rk3">침투 4위/25</span></header><div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 1동</span></div><p>대표 <b>동네소비형 9동</b>(69%) · 침투율 <b>0.69%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>생활밀착 업종(식료·생활서비스) 첫 결제·재사용 혜택으로 주민의 반복 이용을 늘린다. 대학상권은 청년 캐시백을 병행.</p></section>
-    </article><article class="sc s0">
-     <header class="sc-h"><b>강서구</b><span class="rk3">침투 15위/25</span></header>
-     <div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 1동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>동네소비형 8동</b>(40%) · 침투율 <b>0.08%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
+    </article><article class="sc s0"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>강서구</b><span class="rk3">침투 15위/25</span></header><div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 1동</span></div><p>대표 <b>동네소비형 8동</b>(40%) · 침투율 <b>0.08%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>생활밀착 업종(식료·생활서비스) 첫 결제·재사용 혜택으로 주민의 반복 이용을 늘린다. 대학상권은 청년 캐시백을 병행.</p></section>
-    </article><article class="sc s0">
-     <header class="sc-h"><b>관악구</b><span class="rk3">침투 2위/25</span></header>
-     <div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 1동</span><span class="zchip s5">야간거점 1동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>동네소비형 16동</b>(76%) · 침투율 <b>0.72%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
+    </article><article class="sc s0"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>관악구</b><span class="rk3">침투 2위/25</span></header><div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 1동</span><span class="zchip s5">야간거점 1동</span></div><p>대표 <b>동네소비형 16동</b>(76%) · 침투율 <b>0.72%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>생활밀착 업종(식료·생활서비스) 첫 결제·재사용 혜택으로 주민의 반복 이용을 늘린다. 대학상권은 청년 캐시백을 병행. 야간거점은 저녁(17~24시) 페이백을 병행.</p></section>
-    </article><article class="sc s1">
-     <header class="sc-h"><b>광진구</b><span class="rk3">침투 6위/25</span></header>
-     <div class="zones"><span class="zchip s1">대표 활력상권형</span><span class="zchip s4">대학상권 3동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>활력상권형 8동</b>(53%) · 침투율 <b>0.51%</b>. 주말·저녁·식음료 비중이 높은 번화 상권.</p></section>
+    </article><article class="sc s1"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>광진구</b><span class="rk3">침투 6위/25</span></header><div class="zones"><span class="zchip s1">대표 활력상권형</span><span class="zchip s4">대학상권 3동</span></div><p>대표 <b>활력상권형 8동</b>(53%) · 침투율 <b>0.51%</b>. 주말·저녁·식음료 비중이 높은 번화 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>주말·저녁 식음료 가맹 확대와 시간대 페이백으로 번화가 소비를 서울페이로 유도한다. 대학상권은 청년 캐시백을 병행.</p></section>
-    </article><article class="sc s0">
-     <header class="sc-h"><b>구로구</b><span class="rk3">침투 24위/25</span></header>
-     <div class="zones"><span class="zchip s0">대표 동네소비형</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>동네소비형 9동</b>(56%) · 침투율 <b>0.01%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
+    </article><article class="sc s0"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>구로구</b><span class="rk3">침투 24위/25</span></header><div class="zones"><span class="zchip s0">대표 동네소비형</span></div><p>대표 <b>동네소비형 9동</b>(56%) · 침투율 <b>0.01%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>생활밀착 업종(식료·생활서비스) 첫 결제·재사용 혜택으로 주민의 반복 이용을 늘린다.</p></section>
-    </article><article class="sc s0">
-     <header class="sc-h"><b>금천구</b><span class="rk3">침투 11위/25</span></header>
-     <div class="zones"><span class="zchip s0">대표 동네소비형</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>동네소비형 6동</b>(60%) · 침투율 <b>0.22%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
+    </article><article class="sc s0"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>금천구</b><span class="rk3">침투 11위/25</span></header><div class="zones"><span class="zchip s0">대표 동네소비형</span></div><p>대표 <b>동네소비형 6동</b>(60%) · 침투율 <b>0.22%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>생활밀착 업종(식료·생활서비스) 첫 결제·재사용 혜택으로 주민의 반복 이용을 늘린다.</p></section>
-    </article><article class="sc s0">
-     <header class="sc-h"><b>노원구</b><span class="rk3">침투 8위/25</span></header>
-     <div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 2동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>동네소비형 12동</b>(63%) · 침투율 <b>0.34%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
+    </article><article class="sc s0"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>노원구</b><span class="rk3">침투 8위/25</span></header><div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 2동</span></div><p>대표 <b>동네소비형 12동</b>(63%) · 침투율 <b>0.34%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>생활밀착 업종(식료·생활서비스) 첫 결제·재사용 혜택으로 주민의 반복 이용을 늘린다. 대학상권은 청년 캐시백을 병행.</p></section>
-    </article><article class="sc s0">
-     <header class="sc-h"><b>도봉구</b><span class="rk3">침투 5위/25</span></header>
-     <div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 1동</span><span class="zchip s5">야간거점 1동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>동네소비형 11동</b>(79%) · 침투율 <b>0.64%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
+    </article><article class="sc s0"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>도봉구</b><span class="rk3">침투 5위/25</span></header><div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 1동</span><span class="zchip s5">야간거점 1동</span></div><p>대표 <b>동네소비형 11동</b>(79%) · 침투율 <b>0.64%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>생활밀착 업종(식료·생활서비스) 첫 결제·재사용 혜택으로 주민의 반복 이용을 늘린다. 대학상권은 청년 캐시백을 병행. 야간거점은 저녁(17~24시) 페이백을 병행.</p></section>
-    </article><article class="sc s0">
-     <header class="sc-h"><b>동대문구</b><span class="rk3">침투 13위/25</span></header>
-     <div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 2동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>동네소비형 6동</b>(43%) · 침투율 <b>0.11%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
+    </article><article class="sc s0"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>동대문구</b><span class="rk3">침투 13위/25</span></header><div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 2동</span></div><p>대표 <b>동네소비형 6동</b>(43%) · 침투율 <b>0.11%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>생활밀착 업종(식료·생활서비스) 첫 결제·재사용 혜택으로 주민의 반복 이용을 늘린다. 대학상권은 청년 캐시백을 병행.</p></section>
-    </article><article class="sc s0">
-     <header class="sc-h"><b>동작구</b><span class="rk3">침투 3위/25</span></header>
-     <div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 1동</span><span class="zchip s5">야간거점 1동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>동네소비형 10동</b>(67%) · 침투율 <b>0.71%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
+    </article><article class="sc s0"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>동작구</b><span class="rk3">침투 3위/25</span></header><div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 1동</span><span class="zchip s5">야간거점 1동</span></div><p>대표 <b>동네소비형 10동</b>(67%) · 침투율 <b>0.71%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>생활밀착 업종(식료·생활서비스) 첫 결제·재사용 혜택으로 주민의 반복 이용을 늘린다. 대학상권은 청년 캐시백을 병행. 야간거점은 저녁(17~24시) 페이백을 병행.</p></section>
-    </article><article class="sc s1">
-     <header class="sc-h"><b>마포구</b><span class="rk3">침투 18위/25</span></header>
-     <div class="zones"><span class="zchip s1">대표 활력상권형</span><span class="zchip s4">대학상권 1동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>활력상권형 9동</b>(56%) · 침투율 <b>0.06%</b>. 주말·저녁·식음료 비중이 높은 번화 상권.</p></section>
+    </article><article class="sc s1"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>마포구</b><span class="rk3">침투 18위/25</span></header><div class="zones"><span class="zchip s1">대표 활력상권형</span><span class="zchip s4">대학상권 1동</span></div><p>대표 <b>활력상권형 9동</b>(56%) · 침투율 <b>0.06%</b>. 주말·저녁·식음료 비중이 높은 번화 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>주말·저녁 식음료 가맹 확대와 시간대 페이백으로 번화가 소비를 서울페이로 유도한다. 대학상권은 청년 캐시백을 병행.</p></section>
-    </article><article class="sc s0">
-     <header class="sc-h"><b>서대문구</b><span class="rk3">침투 12위/25</span></header>
-     <div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 2동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>동네소비형 11동</b>(79%) · 침투율 <b>0.14%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
+    </article><article class="sc s0"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>서대문구</b><span class="rk3">침투 12위/25</span></header><div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 2동</span></div><p>대표 <b>동네소비형 11동</b>(79%) · 침투율 <b>0.14%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>생활밀착 업종(식료·생활서비스) 첫 결제·재사용 혜택으로 주민의 반복 이용을 늘린다. 대학상권은 청년 캐시백을 병행.</p></section>
-    </article><article class="sc s1">
-     <header class="sc-h"><b>서초구</b><span class="rk3">침투 19위/25</span></header>
-     <div class="zones"><span class="zchip s1">대표 활력상권형</span><span class="zchip s5">야간거점 1동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>활력상권형 7동</b>(39%) · 침투율 <b>0.06%</b>. 주말·저녁·식음료 비중이 높은 번화 상권.</p></section>
+    </article><article class="sc s1"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>서초구</b><span class="rk3">침투 19위/25</span></header><div class="zones"><span class="zchip s1">대표 활력상권형</span><span class="zchip s5">야간거점 1동</span></div><p>대표 <b>활력상권형 7동</b>(39%) · 침투율 <b>0.06%</b>. 주말·저녁·식음료 비중이 높은 번화 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>주말·저녁 식음료 가맹 확대와 시간대 페이백으로 번화가 소비를 서울페이로 유도한다. 야간거점은 저녁(17~24시) 페이백을 병행.</p></section>
-    </article><article class="sc s0">
-     <header class="sc-h"><b>성동구</b><span class="rk3">침투 7위/25</span></header>
-     <div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 1동</span><span class="zchip s5">야간거점 1동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>동네소비형 8동</b>(47%) · 침투율 <b>0.37%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
+    </article><article class="sc s0"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>성동구</b><span class="rk3">침투 7위/25</span></header><div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 1동</span><span class="zchip s5">야간거점 1동</span></div><p>대표 <b>동네소비형 8동</b>(47%) · 침투율 <b>0.37%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>생활밀착 업종(식료·생활서비스) 첫 결제·재사용 혜택으로 주민의 반복 이용을 늘린다. 대학상권은 청년 캐시백을 병행. 야간거점은 저녁(17~24시) 페이백을 병행.</p></section>
-    </article><article class="sc s0">
-     <header class="sc-h"><b>성북구</b><span class="rk3">침투 1위/25</span></header>
-     <div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 5동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>동네소비형 10동</b>(50%) · 침투율 <b>0.88%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
+    </article><article class="sc s0"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>성북구</b><span class="rk3">침투 1위/25</span></header><div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s4">대학상권 5동</span></div><p>대표 <b>동네소비형 10동</b>(50%) · 침투율 <b>0.88%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>생활밀착 업종(식료·생활서비스) 첫 결제·재사용 혜택으로 주민의 반복 이용을 늘린다. 대학상권은 청년 캐시백을 병행.</p></section>
-    </article><article class="sc s1">
-     <header class="sc-h"><b>송파구</b><span class="rk3">침투 23위/25</span></header>
-     <div class="zones"><span class="zchip s1">대표 활력상권형</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>활력상권형 13동</b>(48%) · 침투율 <b>0.02%</b>. 주말·저녁·식음료 비중이 높은 번화 상권.</p></section>
+    </article><article class="sc s1"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>송파구</b><span class="rk3">침투 23위/25</span></header><div class="zones"><span class="zchip s1">대표 활력상권형</span></div><p>대표 <b>활력상권형 13동</b>(48%) · 침투율 <b>0.02%</b>. 주말·저녁·식음료 비중이 높은 번화 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>주말·저녁 식음료 가맹 확대와 시간대 페이백으로 번화가 소비를 서울페이로 유도한다.</p></section>
-    </article><article class="sc s0">
-     <header class="sc-h"><b>양천구</b><span class="rk3">침투 14위/25</span></header>
-     <div class="zones"><span class="zchip s0">대표 동네소비형</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>동네소비형 14동</b>(78%) · 침투율 <b>0.10%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
+    </article><article class="sc s0"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>양천구</b><span class="rk3">침투 14위/25</span></header><div class="zones"><span class="zchip s0">대표 동네소비형</span></div><p>대표 <b>동네소비형 14동</b>(78%) · 침투율 <b>0.10%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>생활밀착 업종(식료·생활서비스) 첫 결제·재사용 혜택으로 주민의 반복 이용을 늘린다.</p></section>
-    </article><article class="sc s0">
-     <header class="sc-h"><b>영등포구</b><span class="rk3">침투 20위/25</span></header>
-     <div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s5">야간거점 1동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>동네소비형 9동</b>(50%) · 침투율 <b>0.05%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
+    </article><article class="sc s0"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>영등포구</b><span class="rk3">침투 20위/25</span></header><div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s5">야간거점 1동</span></div><p>대표 <b>동네소비형 9동</b>(50%) · 침투율 <b>0.05%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>생활밀착 업종(식료·생활서비스) 첫 결제·재사용 혜택으로 주민의 반복 이용을 늘린다. 야간거점은 저녁(17~24시) 페이백을 병행.</p></section>
-    </article><article class="sc s1">
-     <header class="sc-h"><b>용산구</b><span class="rk3">침투 17위/25</span></header>
-     <div class="zones"><span class="zchip s1">대표 활력상권형</span><span class="zchip s4">대학상권 1동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>활력상권형 7동</b>(44%) · 침투율 <b>0.07%</b>. 주말·저녁·식음료 비중이 높은 번화 상권.</p></section>
+    </article><article class="sc s1"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>용산구</b><span class="rk3">침투 17위/25</span></header><div class="zones"><span class="zchip s1">대표 활력상권형</span><span class="zchip s4">대학상권 1동</span></div><p>대표 <b>활력상권형 7동</b>(44%) · 침투율 <b>0.07%</b>. 주말·저녁·식음료 비중이 높은 번화 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>주말·저녁 식음료 가맹 확대와 시간대 페이백으로 번화가 소비를 서울페이로 유도한다. 대학상권은 청년 캐시백을 병행.</p></section>
-    </article><article class="sc s0">
-     <header class="sc-h"><b>은평구</b><span class="rk3">침투 9위/25</span></header>
-     <div class="zones"><span class="zchip s0">대표 동네소비형</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>동네소비형 12동</b>(75%) · 침투율 <b>0.34%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
+    </article><article class="sc s0"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>은평구</b><span class="rk3">침투 9위/25</span></header><div class="zones"><span class="zchip s0">대표 동네소비형</span></div><p>대표 <b>동네소비형 12동</b>(75%) · 침투율 <b>0.34%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>생활밀착 업종(식료·생활서비스) 첫 결제·재사용 혜택으로 주민의 반복 이용을 늘린다.</p></section>
-    </article><article class="sc s3">
-     <header class="sc-h"><b>종로구</b><span class="rk3">침투 21위/25</span></header>
-     <div class="zones"><span class="zchip s3">대표 유동인구형</span><span class="zchip s4">대학상권 3동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>유동인구형 6동</b>(35%) · 침투율 <b>0.04%</b>. 주야간 인구비가 상위권이고 외지 유동이 큰 도심 상업지.</p></section>
+    </article><article class="sc s3"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>종로구</b><span class="rk3">침투 21위/25</span></header><div class="zones"><span class="zchip s3">대표 유동인구형</span><span class="zchip s4">대학상권 3동</span></div><p>대표 <b>유동인구형 6동</b>(35%) · 침투율 <b>0.04%</b>. 주야간 인구비가 상위권이고 외지 유동이 큰 도심 상업지.</p></section>
      <section class="blk sol"><h4>제안</h4><p>낮 유동이 큰 도심 — 평일 낮 시간대 안내·혜택으로 방문 소비를 지역 결제로 전환한다. 대학상권은 청년 캐시백을 병행.</p></section>
-    </article><article class="sc s3">
-     <header class="sc-h"><b>중구</b><span class="rk3">침투 25위/25</span></header>
-     <div class="zones"><span class="zchip s3">대표 유동인구형</span><span class="zchip s4">대학상권 1동</span><span class="zchip s5">야간거점 1동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>유동인구형 7동</b>(47%) · 침투율 <b>0.01%</b>. 주야간 인구비가 상위권이고 외지 유동이 큰 도심 상업지.</p></section>
+    </article><article class="sc s3"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>중구</b><span class="rk3">침투 25위/25</span></header><div class="zones"><span class="zchip s3">대표 유동인구형</span><span class="zchip s4">대학상권 1동</span><span class="zchip s5">야간거점 1동</span></div><p>대표 <b>유동인구형 7동</b>(47%) · 침투율 <b>0.01%</b>. 주야간 인구비가 상위권이고 외지 유동이 큰 도심 상업지.</p></section>
      <section class="blk sol"><h4>제안</h4><p>낮 유동이 큰 도심 — 평일 낮 시간대 안내·혜택으로 방문 소비를 지역 결제로 전환한다. 대학상권은 청년 캐시백을 병행. 야간거점은 저녁(17~24시) 페이백을 병행.</p></section>
-    </article><article class="sc s0">
-     <header class="sc-h"><b>중랑구</b><span class="rk3">침투 10위/25</span></header>
-     <div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s5">야간거점 1동</span></div>
-     <section class="blk now"><h4>현황</h4><p>대표 <b>동네소비형 12동</b>(75%) · 침투율 <b>0.32%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
+    </article><article class="sc s0"><section class="blk now"><h4>현황</h4><header class="sc-h"><b>중랑구</b><span class="rk3">침투 10위/25</span></header><div class="zones"><span class="zchip s0">대표 동네소비형</span><span class="zchip s5">야간거점 1동</span></div><p>대표 <b>동네소비형 12동</b>(75%) · 침투율 <b>0.32%</b>. 생활밀착·소매 비중과 저녁 매출이 높고 외부 유입은 낮은 정주 상권.</p></section>
      <section class="blk sol"><h4>제안</h4><p>생활밀착 업종(식료·생활서비스) 첫 결제·재사용 혜택으로 주민의 반복 이용을 늘린다. 야간거점은 저녁(17~24시) 페이백을 병행.</p></section>
     </article></div>
 
